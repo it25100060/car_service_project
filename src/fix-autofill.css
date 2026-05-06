@@ -1,0 +1,31 @@
+/* Fix browser autofill for dark mode and input text visibility */
+input:-webkit-autofill,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:active {
+  -webkit-text-fill-color: #fff !important;
+  caret-color: #fff !important;
+  box-shadow: 0 0 0 1000px #0f172a inset !important; /* bg-slate-950 */
+  background-color: #0f172a !important;
+  color: #fff !important;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+input:-internal-autofill-selected {
+  background-color: #0f172a !important;
+  color: #fff !important;
+  -webkit-text-fill-color: #fff !important;
+  caret-color: #fff !important;
+}
+
+input:-moz-autofill,
+input:-moz-autofill:focus {
+  box-shadow: 0 0 0 1000px #0f172a inset !important;
+  background-color: #0f172a !important;
+  color: #fff !important;
+  caret-color: #fff !important;
+}
+
+input:-webkit-autofill::first-line {
+  color: #fff !important;
+}
