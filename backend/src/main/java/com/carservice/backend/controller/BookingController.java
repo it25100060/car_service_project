@@ -29,6 +29,7 @@ public class BookingController {
             return ResponseEntity.ok(bookingService.getBookingById(id));
         } catch (Exception e) {
             return ResponseEntity.notFound().build();
+            // return ResponseEntity.badRequest().body(e.getMessage());
         }
     }
 
