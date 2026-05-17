@@ -1,17 +1,18 @@
 package com.carservice.backend.service;
 
-import java.util.List;
-import java.util.stream.Collectors;
-
+import com.carservice.backend.model.Booking;
+import com.carservice.backend.repository.BookingRepository;
+import com.carservice.backend.util.IDGenerator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.carservice.backend.dto.BookingResponse;
-import com.carservice.backend.model.Booking;
 import com.carservice.backend.model.Vehicle;
-import com.carservice.backend.repository.BookingRepository;
 import com.carservice.backend.repository.VehicleRepository;
-import com.carservice.backend.util.IDGenerator;
+import java.util.stream.Collectors;
+
+
+import java.util.List;
 
 @Service
 public class BookingService {
