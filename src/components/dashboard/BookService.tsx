@@ -101,18 +101,14 @@ export function BookService() {
       const response = await apiRequest(`/bookings/customer/${user.id}`);
       const bookingsData = Array.isArray(response) ? response : [];
       
-      // Enhance bookings with vehicle and service names
-      const enhancedBookings = await Promise.all(
-        bookingsData.map(async (booking: any) => {
-          const vehicleData = vehicles.find(v => v.id === booking.vehicleId);
-          const serviceName = getServiceName(booking.serviceType);
-          return {
-            ...booking,
-            vehicleName: vehicleData?.model || 'Unknown Vehicle',
-            serviceName: serviceName,
-          };
-        })
-      );
+      // ← CHANGED: use vehicleMake and vehicleModel from backend response
+      const enhancedBookings = bookingsData.map((booking: any) => ({
+        ...booking,
+        vehicleName: booking.vehicleMake && booking.vehicleModel
+          ? `${booking.vehicleYear} ${booking.vehicleMake} ${booking.vehicleModel}`
+          : 'Unknown Vehicle',
+        serviceName: getServiceName(booking.serviceType),
+      }));
       
       setBookings(enhancedBookings);
     } catch (error) {
