@@ -1,0 +1,3 @@
+A-1776005953313,admin,admin@autocare.com,admin123,true
+A-82271203818458,lakshithaaaaaaa,lakshitha@gmail.com,123456789,true
+A-118927569433708,nissan,nissan@gmail.com,nissan,true
