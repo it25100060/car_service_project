@@ -1,0 +1,8 @@
+SA001,Super Admin,admin@autocare.com,admin,SUPER_ADMIN
+U001,John Doe,john@gmail.com,123456,CUSTOMER
+U002,Jane Smith,jane@gmail.com,123456,CUSTOMER
+U003,Mike Johnson,mike@gmail.com,123456,MECHANIC
+U004,Sarah Williams,sarah@gmail.com,123456,MECHANIC
+U-1775905904194,jhi,info.jkplakshitha@gmail.com,1234,CUSTOMER
+U-1775916889102,machn,machn@gmail.com,1234,MECHANIC
+U-1776055769341,Lakshitha Dilshann,lakshitha@gmail.com,@Lakshitha,CUSTOMER
